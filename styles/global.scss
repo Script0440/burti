@@ -1,0 +1,105 @@
+@import "reset.scss";
+@import "header.scss";
+@import "button.scss";
+@import "start.scss";
+@import "why-burty.scss";
+@import "about.scss";
+@import "how-it-works.scss";
+@import "faq.scss";
+@import "features.scss";
+@import "game.scss";
+@import "footer.scss";
+
+:root {
+  --font-noto-sans-georgian: "Noto Sans Georgian", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+body {
+  color: #fff;
+  font-family: "montserrat";
+  overflow: hidden;
+  background: linear-gradient(to bottom, #e4ece2, #f7eaf7);
+}
+
+a {
+  color: #fff;
+}
+
+.bg-smoke {
+  position: absolute;
+}
+
+.section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.container {
+  padding: 0px 100px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: calc(100vh - 108px);
+  width: 100%;
+}
+
+.title-wrapper {
+  .title {
+    font-size: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    gap: 20px;
+    h1 {
+      font-size: 50px;
+    }
+    img {
+      width: 50px;
+    }
+    color: #40ff40;
+  }
+  .title::before,
+  .title::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    border-radius: 50px;
+    background: linear-gradient(to bottom right, #40ff40, rgba(#bfff40, 0.9));
+    z-index: -2;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    margin: 0 10px;
+  }
+}
+
+/* Общий стиль скроллбара */
+::-webkit-scrollbar {
+  width: 8px; /* Ширина вертикального скроллбара */
+  height: 8px; /* Высота горизонтального скроллбара */
+}
+
+/* Стиль ползунка */
+::-webkit-scrollbar-thumb {
+  background: #32cd32;
+  z-index: 2;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-track {
+  //   background-color: #006400;
+  background: linear-gradient(to bottom right, #40ff40, rgba(#bfff40, 0.9));
+}
+
+/* Эффект наведения на ползунок */
+::-webkit-scrollbar-thumb:hover {
+  background: #228b22; /* Тёмно-зелёный оттенок при наведении */
+}
+
+/* Стиль выделенного текста */
+::selection {
+  background: #0a0a0a;
+  color: #ffffff; /* Белый цвет текста для контраста */
+}

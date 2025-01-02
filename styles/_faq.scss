@@ -1,0 +1,55 @@
+.faq {
+  .list {
+    list-style: none;
+    padding: 0;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item {
+    background: linear-gradient(
+      to bottom right,
+      #40ff40,
+      rgba(191, 255, 64, 0.9)
+    );
+    border-radius: 30px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.45);
+  }
+
+  .item button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+  }
+
+  .item button .svg {
+    transition: transform 0.3s ease; /* Плавная анимация вращения */
+    border-radius: 10px;
+  }
+
+  .item button .svg.rotated {
+    transform: rotate(180deg); /* Поворот стрелки */
+  }
+
+  .item-content {
+    max-height: 0; /* Высота по умолчанию */
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease; /* Плавное изменение высоты */
+    padding: 0 25px; /* Убираем отступы, чтобы они не влияли на высоту */
+  }
+
+  .item-content.open {
+    max-height: 200px; /* Примерно максимальная высота открытого блока */
+    padding: 25px; /* Возвращаем отступы при открытии */
+  }
+}

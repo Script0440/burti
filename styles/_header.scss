@@ -1,0 +1,22 @@
+.header {
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //   background: linear-gradient(to bottom right, #00ff00, rgba(#40ff40, 0.9));
+  background: linear-gradient(to bottom right, #40ff40, rgba(#bfff40, 0.9));
+
+  position: sticky;
+  z-index: 5;
+  .logo {
+    flex: 1;
+  }
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+
+  gap: 20px;
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}

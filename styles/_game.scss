@@ -1,0 +1,121 @@
+.game {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.stadium {
+  width: 1000px; /* Фиксированная ширина поля */
+  height: 400px;
+  position: relative;
+  background: #e0e0e0;
+  overflow: hidden;
+  border-radius: 50px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
+}
+
+.out {
+  height: calc(100% - 150px);
+  width: 120px;
+  background: transparent;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.bar {
+  width: 120px;
+  height: 5px;
+  position: absolute;
+  bottom: 150px;
+  z-index: 10;
+  background: transparent;
+}
+.stadium::after {
+  content: "";
+  background-image: url("/img/63801.jpeg");
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+}
+
+.goal {
+  position: absolute;
+  width: 120px !important; /* Ширина ворот */
+  height: 150px; /* Высота ворот */
+  bottom: -80px !important;
+  background-color: red;
+  transform: translateY(-50%);
+  z-index: 1;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
+}
+
+.grass {
+  position: absolute;
+  background-color: rgb(8, 58, 8);
+  height: 30px;
+  width: 100%;
+  bottom: 0px;
+  right: 0px;
+  z-index: 1;
+}
+
+.goal-left {
+  left: 0;
+  bottom: -100px;
+  background: transparent;
+  z-index: 5;
+  width: max-content;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ball {
+  position: absolute;
+  width: 50px; /* Размер мяча */
+  height: 50px;
+  transition: top 0.05s, left 0.05s;
+  z-index: 2;
+  border-radius: 100%;
+}
+
+.ball.spinning {
+  animation: spin 1s linear infinite; /* Вращение мяча */
+}
+
+.goal-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  font-weight: bold;
+  color: gold;
+  text-shadow: 2px 2px 5px black;
+  display: none; /* Скрыто по умолчанию */
+  z-index: 10;
+}
+.out-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  font-weight: bold;
+  color: gold;
+  text-shadow: 2px 2px 5px black;
+  display: none; /* Скрыто по умолчанию */
+  z-index: 10;
+}

@@ -1,0 +1,13 @@
+
+# Игнорировать node_modules (для JavaScript/Node.js проектов)
+node_modules/
+
+
+# Игнорировать бинарные файлы
+*.exe
+*.dll
+*.so
+*.o
+*.out
+
+
