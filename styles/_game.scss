@@ -1,9 +1,16 @@
 .game {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
+  #bg1 {
+    position: absolute;
+    width: 500px;
+    bottom: -100px;
+    right: -100px;
+  }
 }
 
 .stadium {

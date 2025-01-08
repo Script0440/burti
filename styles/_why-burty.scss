@@ -3,8 +3,20 @@
   #bgboll1 {
     top: -100px;
     z-index: -1;
+    right: 0;
     position: absolute;
     width: 500px !important;
+  }
+  #bgSmoke1 {
+    left: -100px;
+    z-index: -1;
+    position: absolute;
+  }
+  #bgSmoke2 {
+    bottom: -100px;
+    right: 0px;
+    z-index: -1;
+    position: absolute;
   }
   .items {
     display: flex;

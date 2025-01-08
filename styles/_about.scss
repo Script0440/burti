@@ -1,4 +1,25 @@
 .about {
+  position: relative;
+  #bg1 {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  #bg2 {
+    z-index: -1;
+    position: absolute;
+    right: -100px;
+    bottom: 0;
+    width: 250px;
+  }
+  #bg3 {
+    z-index: -1;
+    position: absolute;
+    bottom: -160px;
+    right: 0px;
+    width: 400px;
+  }
   .content {
     display: flex;
     gap: 50px;

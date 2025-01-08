@@ -1,4 +1,9 @@
 .how-it-works {
+  position: relative;
+  #bg1 {
+    position: absolute;
+    right: 0;
+  }
   .content {
     .items {
       display: flex;

@@ -12,18 +12,49 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="logo">logo</h1>
+      <div class="logo">
+        <a href="#home">
+          <img src="/img/logo.png" alt="" />
+        </a>
+      </div>
+      <button id="switchLng" class="switchLng">
+        <img
+          id="usaLng"
+          src="/img/usa-flag.png"
+          alt="USA Flag"
+          style="display: block"
+        />
+        <img
+          id="geLng"
+          src="/img/georgia-flag.png"
+          alt="Georgia Flag"
+          style="display: none"
+        />
+      </button>
       <ul class="nav">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
+        <li><a href="#whyChoose">Why Choose</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#howItWorks">How it works?</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#faq">FAQ</a></li>
       </ul>
-      <button class="switchLng">En</button>
+      <button class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-panel">
+        <ul class="nav">
+          <li><a href="#whyChoose">Why Choose</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#howItWorks">How it works?</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
     </header>
     <div class="container">
-      <section class="section start">
+      <section id="home" class="section start">
         <img class="bg-smoke" id="bgSmoke1" src="/img/smokeBlue.png" alt="" />
         <img class="bg-smoke" id="bgSmoke2" src="/img/smokepurple.png" alt="" />
         <div class="content">
@@ -34,9 +65,9 @@
               with players effortlessly – all through the BURTY app
             </h4>
             <button class="button">Download the App</button>
-            <h5>
+            <!-- <h5>
               Interested in partnering with us? <a href="#">Learn More...</a>
-            </h5>
+            </h5> -->
           </div>
           <div class="img">
             <img
@@ -48,8 +79,10 @@
           </div>
         </div>
       </section>
-      <section class="section why-burty">
+      <section id="whyChoose" class="section why-burty">
         <img id="bgboll1" src="/img/ball1.png" alt="" />
+        <img class="bg" id="bgSmoke1" src="/img/bg1.png" alt="" />
+        <img class="bg-smoke" id="bgSmoke2" src="/img/bg3.png" alt="" />
         <div class="content">
           <div class="title-wrapper">
             <h1 class="title">Why Choose BURTY?</h1>
@@ -83,7 +116,10 @@
           </ul>
         </div>
       </section>
-      <section class="section about">
+      <section id="about" class="section about">
+        <img class="bg-smoke" id="bg1" src="/img/bg2.png" alt="" />
+        <img class="bg-smoke" id="bg2" src="/img/smokeBlue.png" alt="" />
+        <img class="bg-smoke" id="bg3" src="/img/footbollHuman.png" alt="" />
         <div class="title-wrapper">
           <h1 class="title">About BURTY</h1>
         </div>
@@ -139,7 +175,8 @@
           </div>
         </div>
       </section>
-      <section class="section how-it-works">
+      <section id="howItWorks" class="section how-it-works">
+        <img class="bg-smoke" id="bg1" src="/img/bg3.png" alt="" />
         <div class="title-wrapper">
           <h1 class="title">How it works?</h1>
         </div>
@@ -175,10 +212,13 @@
           </ul>
         </div>
       </section>
-      <section class="section features">
+      <section id="features" class="section features">
         <div class="title-wrapper">
           <h1 class="title">Explore BURTY’s Features</h1>
         </div>
+        <img class="bg-smoke" id="bg1" src="/img/footbollBg.png" alt="" />
+        <img class="bg-smoke" id="bg2" src="/img/bg4.png" alt="" />
+
         <div class="content">
           <ul class="features-items">
             <li class="features-item">Everything at your fingertips.</li>
@@ -215,7 +255,7 @@
           </div>
         </div>
       </section>
-      <section class="section faq">
+      <section id="faq" class="section faq">
         <div class="title-wrapper">
           <h1 class="title">FAQ – Frequently Asked Questions</h1>
         </div>
@@ -326,6 +366,8 @@
         </ul>
       </section>
       <section class="section game">
+        <img class="bg-smoke" id="bg1" src="/img/kvara.png" alt="" />
+
         <div class="stadium">
           <div class="out"></div>
           <div class="bar"></div>
