@@ -1,3 +1,5 @@
+@import 'variables';
+
 .how-it-works {
   position: relative;
   #bg1 {
@@ -6,24 +8,42 @@
   }
   .content {
     .items {
+		@media(max-width:698px){
+			.item{
+				div {
+					transform: rotate(0deg) !important;
+				 }
+			}
+		}
+		@media(max-width:1175px){
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		@media(min-width:1440px){
+			img{
+				display: block !important;
+				position: absolute;
+			}
+		}
       display: flex;
       justify-content: space-between;
-      gap: 20px;
+		gap:50px;
+
       .item {
         position: relative;
         margin-bottom: 20px;
-
         div {
           text-align: center;
           flex-direction: column;
           display: flex;
-          width: 300px;
+			 width:100%;
+			 min-width:200px;
+          max-width: 300px;
+			 padding: 10px;
           height: 200px;
-          background: linear-gradient(
-            to bottom right,
-            #40ff40,
-            rgba(#bfff40, 0.9)
-          );
+			 background: linear-gradient(to bottom right, $color-primary, $color-secondary);
+
           box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
           transition: transform 0.2s, box-shadow 0.2s;
           border-radius: 50px;
@@ -32,6 +52,7 @@
         }
         display: flex;
         img {
+			display: none;
           position: absolute;
           bottom: 0px;
           right: -250px;

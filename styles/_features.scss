@@ -1,3 +1,5 @@
+@import 'variables';
+
 .features {
   position: relative;
   #bg1 {
@@ -15,28 +17,79 @@
   .content {
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
 
-    background: linear-gradient(
-      to bottom right,
-      #40ff40,
-      rgba(191, 255, 64, 0.9)
-    );
+	 background: linear-gradient(to bottom right, $color-primary, $color-secondary);
     display: flex;
-    justify-content: space-between;
     padding: 50px;
     border-radius: 100px;
     width: 80%;
     margin: 0 auto;
+	 justify-content: center;
+	 gap:10vw;
+	 flex-wrap: wrap;
+	 @media(max-width:860px){
+		 padding: 20px !important;
+		 border-radius: 20px;
+		width: 100%;
+		.features-items{
+			width: 240px !important;
+			height: 240px !important;
+			.features-item{
+				width: 30px !important;
+				height: 30px !important;
+				font-size: 0px !important;
+			}
+		}
+		.items{
+			width: 100% !important;
+		}
+	 }
+	 @media(min-width:860px) and (max-width:1400px){
+		 padding: 50px !important;
+		 align-items: center;
+		width: 100%;
+		.features-items{
+			width: 350px !important;
+			height: 350px !important;
+			.features-item{
+				width: 80px !important;
+				height: 80px !important;
+				font-size: 0px !important;
+			}
+		}
+	 }
+	 @media(min-width:1400px) and (max-width:1700px){
+		 padding: 50px !important;
+		 align-items: center;
+		width: 100%;
+		.features-items{
+			width: 400px !important;
+			height: 400px !important;
+			.features-item{
+				width: 100px !important;
+				height: 100px !important;
+				font-size: 10px !important;
+				font-weight: 500 !important;
+			}
+		}
+	 }
+	 @media(min-width:1700px){
+		.features-items{
+			width: 500px !important;
+			height: 500px !important;
+			.features-item{
+				width: 120px !important;
+				height: 120px !important;
+				font-size: 12px !important;
+			}
+		}
+	 }
     .features-items {
       z-index: 5;
-
-      background: linear-gradient(
-        to bottom right,
-        #ffffff,
-        rgba(230, 248, 195, 0.9)
-      );
+      background: #fff;
       border-radius: 50%;
-      width: 600px;
-      height: 600px;
+		width: 100%;
+      max-width: 500px;
+      height: 500px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -46,22 +99,18 @@
       box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
 
       .features-item {
-        background: linear-gradient(
-          to bottom right,
-          #40ff40,
-          rgba(191, 255, 64, 0.9)
-        );
+			background: linear-gradient(to bottom right, $color-primary, $color-secondary);
         border-radius: 50%;
-        font-size: 14px;
-        width: 150px;
-        height: 150px;
+        font-size: 12px;
+		  padding: 10px;
+        width: 120px;
+        height: 120px;
         position: absolute;
         display: flex;
         justify-content: center;
         align-items: center;
         font-weight: bold;
         text-align: center;
-
         box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
       }
       .features-item:nth-last-child(1) {
@@ -107,26 +156,18 @@
     .items {
       width: 450px;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 50px;
+		flex-direction: column;
+      gap: 30px;
       .item {
         box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
         transition: transform 0.2s, box-shadow 0.2s;
-
-        gap: 20px;
         font-size: 12px;
         padding: 10px;
-        background: linear-gradient(
-          to bottom right,
-          #40ff40,
-          rgba(191, 255, 64, 0.9)
-        );
+		  background: linear-gradient(to bottom right, $color-primary, $color-secondary);
         border: 2px solid #fff;
+		  border-radius: 20px;
         color: #fff;
-        border-radius: 100%;
-        width: 180px;
-        height: 180px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;

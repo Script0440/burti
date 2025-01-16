@@ -1,3 +1,5 @@
+@import 'variables';
+
 .faq {
   .list {
     list-style: none;
@@ -8,11 +10,8 @@
   }
 
   .item {
-    background: linear-gradient(
-      to bottom right,
-      #40ff40,
-      rgba(191, 255, 64, 0.9)
-    );
+	background: linear-gradient(to bottom right, $color-primary, $color-secondary);
+
     border-radius: 30px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.45);
   }

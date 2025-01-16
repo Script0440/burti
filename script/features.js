@@ -4,7 +4,20 @@ const items = document.querySelectorAll(".features-item");
 // Конфигурация
 const mouseSpeedBoost = 2; // Ускорение при наведении мыши
 const baseSpeedMultiplier = 2; // Базовая скорость шариков
-const containerSize = 600; // Размер большого круга (контейнера)
+let containerSize = 500;
+
+if (window.innerWidth <= 460) {
+  containerSize = 240;
+}
+if (window.innerWidth >= 460 ) {
+  containerSize = 350;
+}
+if (window.innerWidth === 1400 ) {
+  containerSize = 400;
+}
+if (window.innerWidth > 1700 ) {
+  containerSize = 500;
+}
 const radius = containerSize / 2; // Радиус большого круга
 
 // Генерация случайной позиции внутри круга

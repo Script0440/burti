@@ -9,10 +9,11 @@
 @import "features.scss";
 @import "game.scss";
 @import "footer.scss";
+@import 'variables';
 
 :root {
-  --font-noto-sans-georgian: "Noto Sans Georgian", sans-serif;
-  --font-montserrat: "Montserrat", sans-serif;
+	--font-open-sans: 'Open Sans', sans-serif;
+  --font-montserrat: "Roboto", sans-serif;
 }
 
 img {
@@ -21,9 +22,11 @@ img {
 
 body {
   color: #fff;
-  font-family: "montserrat";
+  background: #202020 !important;
+
+  font-family: "Open Sans";
   overflow: hidden;
-  background: linear-gradient(to bottom, #e4ece2, #f7eaf7);
+  //   background: linear-gradient(to bottom, #e4ece2, #f7eaf7);
 }
 
 a {
@@ -43,7 +46,7 @@ a {
   scroll-behavior: smooth;
   overflow-x: hidden;
   overflow-y: auto;
-  max-height: calc(100vh - 181px);
+  max-height: calc(100vh - 170px);
   width: 100%;
   @media (max-width: 768px) {
     padding: 0px 20px;
@@ -74,7 +77,7 @@ a {
     img {
       width: 50px;
     }
-    color: #40ff40;
+    color: $color;
     @media (min-width: 1440px) {
       font-size: 50px !important;
     }
@@ -86,6 +89,10 @@ a {
     }
     @media (max-width: 460px) {
       font-size: 20px !important;
+		background: #82ca0e;
+		border-radius: 50px;
+		box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+		padding: 5px;
       text-align: center;
     }
   }
@@ -95,7 +102,7 @@ a {
     flex: 1;
     height: 2px;
     border-radius: 50px;
-    background: linear-gradient(to bottom right, #40ff40, rgba(#bfff40, 0.9));
+	 background: #82ca0e;
     z-index: -2;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     margin: 0 10px;
@@ -110,14 +117,14 @@ a {
 
 /* Стиль ползунка */
 ::-webkit-scrollbar-thumb {
-  background: #32cd32;
+  background: #82ca0e;
   z-index: 2;
   transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-track {
   //   background-color: #006400;
-  background: linear-gradient(to bottom right, #40ff40, rgba(#bfff40, 0.9));
+	 background: linear-gradient(to bottom right, $color-primary, $color-secondary);
 }
 
 /* Эффект наведения на ползунок */
@@ -128,5 +135,5 @@ a {
 /* Стиль выделенного текста */
 ::selection {
   background: #fff;
-  color: #40ff40; /* Белый цвет текста для контраста */
+  color: #82ca0e; /* Белый цвет текста для контраста */
 }

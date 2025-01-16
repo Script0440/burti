@@ -1,12 +1,15 @@
+@import 'variables';
+
 .footer {
   position: fixed;
   bottom: 0;
-  background: linear-gradient(to bottom right, #40ff40, rgba(#bfff40, 0.9));
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
+  background: #82ca0e;
+  box-shadow: 0 5px 15px #82ca0e !important;
   height: 80px;
   font-size: 18px;
   width: 100%;
   left: 0;
+  z-index: 50;
   .content {
     display: flex;
     justify-content: space-between;
@@ -14,9 +17,43 @@
     height: 100%;
     align-items: center;
     padding: 30px;
-    .nav {
-      display: flex;
-      gap: 20px;
-    }
+	 .nav {
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4) !important;
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+		list-style: none;
+		background: #fff;
+		padding: 10px 20px;
+		border-radius: 10px;
+  
+		a {
+		  text-decoration: none;
+		  color: #40ff40;
+		  font-size: 18px;
+		  font-weight: bold;
+		  position: relative;
+		  transition: color 0.3s ease;
+  
+		  &:hover {
+			 color: #40ff40;
+		  }
+  
+		  &::after {
+			 content: "";
+			 position: absolute;
+			 left: 0;
+			 bottom: -3px;
+			 width: 0;
+			 height: 3px;
+			 background: linear-gradient(90deg, #40ff40, #00aaff);
+			 transition: width 0.3s ease;
+		  }
+  
+		  &:hover::after {
+			 width: 100%;
+		  }
+		}
+	 }
   }
 }

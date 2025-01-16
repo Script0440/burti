@@ -1,3 +1,5 @@
+@import 'variables';
+
 .start {
   position: relative;
   height: auto;
@@ -129,7 +131,7 @@
     z-index: -1;
   }
   .content {
-    background: linear-gradient(to bottom right, #40ff40, rgba(#bfff40, 0.9));
+	background: linear-gradient(to bottom right, $color-primary, $color-secondary);
     display: flex;
     justify-content: space-between;
     border-radius: 60px;
