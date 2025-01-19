@@ -1,6 +1,18 @@
 @import 'variables';
 
 .footer {
+	@media(max-width:700px){
+		display: none ;
+	}
+	@media (max-width: 768px) {
+		padding: 0px 20px;
+	 }
+	 @media (min-width: 768px) {
+		padding: 0px 50px;
+	 }
+	 @media (min-width: 1024px) {
+		padding: 0px 100px;
+	 }
   position: fixed;
   bottom: 0;
   background: #82ca0e;
@@ -23,13 +35,13 @@
 		justify-content: center;
 		gap: 20px;
 		list-style: none;
-		background: #fff;
+		background: linear-gradient(to bottom right, $color-primary, $color-secondary);
 		padding: 10px 20px;
 		border-radius: 10px;
   
 		a {
 		  text-decoration: none;
-		  color: #40ff40;
+		  color: #fff;
 		  font-size: 18px;
 		  font-weight: bold;
 		  position: relative;

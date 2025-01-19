@@ -46,8 +46,13 @@ a {
   scroll-behavior: smooth;
   overflow-x: hidden;
   overflow-y: auto;
-  max-height: calc(100vh - 170px);
   width: 100%;
+  @media(max-width:700px){
+	max-height: calc(100vh - 70px);
+  }
+  @media(min-width:700px){
+	max-height: calc(100vh - 170px);
+  }
   @media (max-width: 768px) {
     padding: 0px 20px;
   }
